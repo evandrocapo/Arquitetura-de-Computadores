@@ -186,6 +186,8 @@ readTeams:
 
 	jr $ra
 
+
+################# FUNCAO PRINTA MENU PRINCIPAL #################
 printMainMenu:
 	# Carrega instrucao de print
 	li $v0, 4
@@ -217,6 +219,8 @@ printMainMenu:
 	# Retorna
 	jr $ra
 
+
+################# FUNCAO REGISTRA RESULTADOS #################
 registerResult:
 	addi $t0, $zero, 0
 	
@@ -265,6 +269,8 @@ FIM_REGISTER_RESULT:
 	
 	jr $ra
 
+
+################# FUNCAO ADD VITORIA #################
 addWinner:
     #salva RA na stack
     sub $sp, $sp, 4
@@ -293,6 +299,8 @@ addWinner:
 
     jr $ra
 
+
+################# FUNCAO ADD DERROTA #################
 addLoser:
     #salva RA na stack
     sub $sp, $sp, 4
@@ -321,7 +329,7 @@ addLoser:
     
     jr $ra
 
-
+################# FUNCAO ADD 1 EM JOGOS/VITORIAS/DERROTAS #################
 addOneGameToTime:
     #add 1 jogo nesse time    
     add $t0, $zero, $v0
@@ -353,7 +361,7 @@ addOneGameToTime:
 
     jr $ra
 
-
+################# FUNCAO PRINTA NOME DOS TIMES #################
 printaTimes:
     li $t1,1
     bne $t0, $t1, printaTimes2
@@ -405,9 +413,12 @@ printaTimes10:
     jr $ra
 
 
-
+################# FUNCAO MENU DE EDICAO #################
 editarMenu:
 
+
+
+################# FUNCAO EDITAR NOME DOS TIMES #################
 editarNome:
 
 	addi $t0, $zero, 0
