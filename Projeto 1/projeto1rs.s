@@ -60,7 +60,7 @@ gameTable:	.word 0, 0, 0,
 .text
 .globl auth
 
-
+################# FUNCAO AUTH #################
 auth:
 	# Print de msg informativa
 	la $a0, textPasswordInput
@@ -82,6 +82,8 @@ auth:
 	
 	j auth
 
+
+################# FUNCAO MAIN #################
 main:
 	# Print menu principal
 	jal printMainMenu
@@ -111,26 +113,26 @@ main:
 	# Volta pra main
 	j main
 	
+	exit:
+		# Encerra o programa
+		li $v0, 10
+		syscall
 
-exit:
-	# Encerra o programa
-	li $v0, 10
-	syscall
-
-readTeamsJAL:
-	jal readTeams
-	j main
-registerResultJAL:
-	jal registerResult
-	j main	
-editMenuJAL:
-	jal editarNome
-	j main	
-runResultsJAL:
-#	jal runResults
-	j main	
+	readTeamsJAL:
+		jal readTeams
+		j main
+	registerResultJAL:
+		jal registerResult
+		j main	
+	editMenuJAL:
+		jal editarMenu
+		j main	
+	runResultsJAL:
+	#	jal runResults
+		j main	
 
 
+################# FUNCAO LER NOME DOS TIMES #################
 readTeams:
 	#TODO: Usar loop?
 	# Print msg de exibicao
@@ -403,6 +405,8 @@ printaTimes10:
     jr $ra
 
 
+
+editarMenu:
 
 editarNome:
 
