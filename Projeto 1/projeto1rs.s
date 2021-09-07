@@ -21,6 +21,9 @@ menuItem3Title:		.asciiz "\nO que gostaria de editar?"
 menuItem3_1:		.asciiz "\n1-Nome de um time"
 menuItem3_2:		.asciiz "\n1-Um jogo"
 
+menuItem3_1_1:		.asciiz "\nQual time quer trocar o nome ? ( Digite o numero correspondente )"
+menuItem3_1_2:		.asciiz "\nQual o novo nome ?"
+
 menuItemInvalid:	.asciiz "\nOpcao errada, selecione novamente"
 
 
@@ -49,9 +52,9 @@ gameTable:	.word 0, 0, 0,
         	.word 0, 0, 0,
         	.word 0, 0, 0,
         	.word 0, 0, 0,
-		.word 0, 0, 0,
-		.word 0, 0, 0,
-		.word 0, 0, 0,
+			.word 0, 0, 0,
+			.word 0, 0, 0,
+			.word 0, 0, 0,
 	        .word 0, 0, 0
 
 .text
@@ -121,7 +124,7 @@ registerResultJAL:
 	jal registerResult
 	j main	
 editMenuJAL:
-#	jal editMenu
+	jal editarNome
 	j main	
 runResultsJAL:
 #	jal runResults
@@ -234,7 +237,6 @@ LOOP_1:
 	
 	jal printaTimes
 
-LOOP_2:
 	# Print nome do time
 	li $v0, 4
 	syscall
@@ -262,141 +264,93 @@ FIM_REGISTER_RESULT:
 	jr $ra
 
 addWinner:
-	# Printar "quem ganhou?"
-	la $a0, menuItem2_1
-	li $v0, 4
-	syscall
-	
-	# Receber valor
-	li $v0, 5
-	syscall
-	
-	add $t0, $zero, $v0
-	subi $t0, $t0, 1 # pega a posicao
-	# carrega o valor na matriz ( lembrar de tirar -1 pq o print começa do 1, e n do 0)
+    #salva RA na stack
+    sub $sp, $sp, 4
+    sw $ra, 0($sp)
 
-	# add quantidade de colunas
-	addi $t1, $zero, 3
+    #quando acabar o print, printar "quem ganhou?"
+    la $a0, menuItem2_1
+    li $v0, 4
+    syscall
+    
+    #receber valor
+    li $v0, 5
+    syscall
+    
+    #adicionar vitorias
+    addi $t5, $zero, 1
+	jal addOneGameToTime
 
-	# $t0 index, $t1 quantidade de colunas
-	mult $t0, $t1
-	
-	# resultado do Index * Coluna
-	mflo $t0
-	
-	#carrega o valor da coluna Vitorias
-	addi $t1, $zero, 1
-	add $t0, $t0, $t1
-	
-	#pega posicao da coluna de Vitorias
-	sll $t0, $t0, 5
-	
-	# Carrega endereco da tabela de jogos
-	la $t1, gameTable
-	add $t1, $t1, $t0
-	
-	#soma +1 em vitorias
-	lw $t0, 0($t1)
-	addi $t0, $t0, 1
-	sw $t0, 0($t1)
-	
-	# zera $t0
-	add $t0, $zero, $v0
-	subi $t0, $t0, 1 # pega a posicaoo
-	
-	#carrega o valor na matriz ( lembrar de tirar -1)
-	addi $t1, $zero, 3
+    #adicionar jogos
+	add $t5, $zero, $zero
+	jal addOneGameToTime
 
-	# $t0 index, %1 quantidade de colunas
-	mult $t0, $t1
-	
-	# resultado do I * Coluna
-	mflo $t0
-	
-	#carrega o valor da coluna Jogos
-	addi $t1, $zero, 0
-	add $t0, $t0, $t1
-	
-	#pega posicao da coluna de Jogos
-	sll $t0, $t0, 5
-	
-	la $t1, gameTable
-	add $t1, $t1, $t0
-	
-	#somar jogos
-	lw $t0, 0($t1)
-	addi $t0, $t0, 1
-	sw $t0, 0($t1)
+    #recupera $ra
+    lw $ra, 0($sp)
+    add $sp, $sp, 4
 
-	jr $ra
+    jr $ra
 
 addLoser:
-	#printar "quem perdeu?"
-	la $a0, menuItem2_2
-	li $v0, 4
-	syscall
-	
-	#receber valor
-	li $v0, 5
-	syscall
-	
-	add $t0, $zero, $v0
-	subi $t0, $t0, 1 # pega a posicao
-	
-	#carrega o valor na matriz ( lembrar de tirar -1)
-	addi $t1, $zero, 3
+    #salva RA na stack
+    sub $sp, $sp, 4
+    sw $ra, 0($sp)
 
-	# $t0 index, %1 quantidade de colunas
-	mult $t0, $t1
-	
-	# resultado do I * Coluna
-	mflo $t0
-	
-	#carrega o valor da coluna Derrotas
-	addi $t1, $zero, 2
-	add $t0, $t0, $t1
-	
-	#pega posicaoo da coluna de Derrotas
-	sll $t0, $t0, 5
-	
-	la $t1, gameTable
-	add $t1, $t1, $t0
-	
-	#somar derrotas
-	lw $t0, 0($t1)
-	addi $t0, $t0, 1
-	sw $t0, 0($t1)
+    #printar "quem perdeu?"
+    la $a0, menuItem2_2
+    li $v0, 4
+    syscall
+    
+    #receber valor
+    li $v0, 5
+    syscall
+    
+    #adicionar derrotas
+	addi $t5, $zero, 2
+	jal addOneGameToTime
 
-	
-	#add 1 jogo nesse time	
-	add $t0, $zero, $v0
-	subi $t0, $t0, 1 # pega a posicaoo
-	
-	#carrega o valor na matriz ( lembrar de tirar -1)
-	addi $t1, $zero, 3
+    #adicionar jogos
+	add $t5, $zero, $zero
+	jal addOneGameToTime
 
-	# $t0 index, %1 quantidade de colunas
-	mult $t0, $t1
-	
-	# resultado do I * Coluna
-	mflo $t0
-	
-	#carrega o valor da coluna Jogos
-	addi $t1, $zero, 0
-	add $t0, $t0, $t1
-	
-	#pega posicaoo da coluna de Jogos
-	sll $t0, $t0, 5
-	
-	la $t1, gameTable
-	add $t1, $t1, $t0
-	
-	#somar jogos
-	lw $t0, 0($t1)
-	addi $t0, $t0, 1
-	sw $t0, 0($t1)
-	
-	jr $ra
+    #recupera $ra
+    lw $ra, 0($sp)
+    add $sp, $sp, 4
+    
+    jr $ra
+
+
+addOneGameToTime:
+    #add 1 jogo nesse time    
+    add $t0, $zero, $v0
+    subi $t0, $t0, 1 # pega a posi??o
+    
+    #carrega o tamanho da matriz
+    addi $t1, $zero, 3
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna Jogos (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de Jogos
+    sll $t0, $t0, 5
+    
+    la $t1, gameTable
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    lw $t0, 0($t1)
+    addi $t0, $t0, 1
+    sw $t0, 0($t1)
+
+    jr $ra
+
 
 printaTimes:
     li $t1,1
@@ -447,3 +401,132 @@ printaTimes10:
     li $t1,10
     la $a0, team10
     jr $ra
+
+
+
+editarNome:
+
+	addi $t0, $zero, 0
+	
+	#salva RA na stack
+	sub $sp, $sp, 4
+	sw $ra, 0($sp)
+
+LOOP_3:
+	addi $t0, $t0, 1
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+	
+	jal printaTimes
+
+	# Print nome do time
+	li $v0, 4
+	syscall
+	
+	# Print linha
+	la $a0, line
+	li $v0, 4
+	syscall
+
+	bne $t0, 10, LOOP_3
+
+	#printar "qual time quer trocar o nome?"
+	la $a0, menuItem3_1_1
+	li $v0, 4
+	syscall
+
+	# Receber valor
+	li $v0, 5
+	syscall
+	add $t0, $zero, $v0
+
+	#printar "qual o nome?"
+	la $a0, menuItem3_1_2
+	li $v0, 4
+	syscall
+
+	# Carrega instrucao de leitura
+	li $v0, 8
+	la $a1, teamCharSize
+
+	#recupera $ra
+	lw $ra, 0($sp)
+	add $sp, $sp, 4
+	
+leNovoNome:
+    li $t1,1
+    bne $t0, $t1, leNovoNome2
+	la $a0, team1
+	syscall 
+    jr $ra
+
+leNovoNome2:
+    li $t1,2
+    bne $t0, $t1, leNovoNome3
+	la $a0, team2
+	syscall 
+    jr $ra
+
+leNovoNome3:
+    li $t1,3
+    bne $t0, $t1, leNovoNome4
+	la $a0, team3
+	syscall 
+    jr $ra
+
+leNovoNome4:
+    li $t1,4
+    bne $t0, $t1, leNovoNome5
+	la $a0, team4
+	syscall 
+    jr $ra
+
+leNovoNome5:
+    li $t1,5
+    bne $t0, $t1, leNovoNome6
+	la $a0, team5
+	syscall 
+    jr $ra
+
+leNovoNome6:
+    li $t1,6
+    bne $t0, $t1, leNovoNome7
+	la $a0, team6
+	syscall 
+    jr $ra
+
+leNovoNome7:
+    li $t1,7
+    bne $t0, $t1, leNovoNome8
+	la $a0, team7
+	syscall 
+    jr $ra
+
+leNovoNome8:
+    li $t1,8
+    bne $t0, $t1, leNovoNome9
+	la $a0, team8
+	syscall 
+    jr $ra
+
+leNovoNome9:
+    li $t1,9
+    bne $t0, $t1, leNovoNome10
+	la $a0, team9
+	syscall 
+    jr $ra
+
+leNovoNome10:
+	la $a0, team10
+	syscall 
+    jr $ra
+
+
