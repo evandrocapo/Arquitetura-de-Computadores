@@ -259,49 +259,50 @@ FIM_REGISTER_RESULT:
 	lw $ra, 0($sp)
 	add $sp, $sp, 4
 	
-	j main
+	jr $ra
 
 addWinner:
-	#quando acabar o print, printar "quem ganhou?"
+	# Printar "quem ganhou?"
 	la $a0, menuItem2_1
 	li $v0, 4
 	syscall
 	
-	#receber valor
+	# Receber valor
 	li $v0, 5
 	syscall
 	
 	add $t0, $zero, $v0
-	subi $t0, $t0, 1 # pega a posição
-	
-	#carrega o valor na matriz ( lembrar de tirar -1)
+	subi $t0, $t0, 1 # pega a posicao
+	# carrega o valor na matriz ( lembrar de tirar -1 pq o print comeÃ§a do 1, e n do 0)
+
+	# add quantidade de colunas
 	addi $t1, $zero, 3
 
-	# $t0 index, %1 quantidade de colunas
+	# $t0 index, $t1 quantidade de colunas
 	mult $t0, $t1
 	
-	# resultado do I * Coluna
+	# resultado do Index * Coluna
 	mflo $t0
 	
 	#carrega o valor da coluna Vitorias
 	addi $t1, $zero, 1
 	add $t0, $t0, $t1
 	
-	#pega posição da coluna de Vitorias
+	#pega posicao da coluna de Vitorias
 	sll $t0, $t0, 5
 	
+	# Carrega endereco da tabela de jogos
 	la $t1, gameTable
 	add $t1, $t1, $t0
 	
-	#somar vitorias
+	#soma +1 em vitorias
 	lw $t0, 0($t1)
 	addi $t0, $t0, 1
 	sw $t0, 0($t1)
 	
-	#add 1 jogo nesse time
-	
+	# zera $t0
 	add $t0, $zero, $v0
-	subi $t0, $t0, 1 # pega a posição
+	subi $t0, $t0, 1 # pega a posicaoo
 	
 	#carrega o valor na matriz ( lembrar de tirar -1)
 	addi $t1, $zero, 3
@@ -316,7 +317,7 @@ addWinner:
 	addi $t1, $zero, 0
 	add $t0, $t0, $t1
 	
-	#pega posição da coluna de Jogos
+	#pega posicao da coluna de Jogos
 	sll $t0, $t0, 5
 	
 	la $t1, gameTable
@@ -340,7 +341,7 @@ addLoser:
 	syscall
 	
 	add $t0, $zero, $v0
-	subi $t0, $t0, 1 # pega a posição
+	subi $t0, $t0, 1 # pega a posicao
 	
 	#carrega o valor na matriz ( lembrar de tirar -1)
 	addi $t1, $zero, 3
@@ -355,7 +356,7 @@ addLoser:
 	addi $t1, $zero, 2
 	add $t0, $t0, $t1
 	
-	#pega posição da coluna de Derrotas
+	#pega posicaoo da coluna de Derrotas
 	sll $t0, $t0, 5
 	
 	la $t1, gameTable
@@ -369,7 +370,7 @@ addLoser:
 	
 	#add 1 jogo nesse time	
 	add $t0, $zero, $v0
-	subi $t0, $t0, 1 # pega a posição
+	subi $t0, $t0, 1 # pega a posicaoo
 	
 	#carrega o valor na matriz ( lembrar de tirar -1)
 	addi $t1, $zero, 3
@@ -384,7 +385,7 @@ addLoser:
 	addi $t1, $zero, 0
 	add $t0, $t0, $t1
 	
-	#pega posição da coluna de Jogos
+	#pega posicaoo da coluna de Jogos
 	sll $t0, $t0, 5
 	
 	la $t1, gameTable
@@ -396,8 +397,6 @@ addLoser:
 	sw $t0, 0($t1)
 	
 	jr $ra
-
-
 
 printaTimes:
     li $t1,1
