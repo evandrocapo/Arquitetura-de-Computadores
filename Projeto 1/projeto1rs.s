@@ -19,10 +19,16 @@ menuItem2_2:		.asciiz "\nQual time perdeu ? ( Digite o numero correspondente )"
 # SubMenu 3
 menuItem3Title:		.asciiz "\nO que gostaria de editar?"
 menuItem3_1:		.asciiz "\n1-Nome de um time"
-menuItem3_2:		.asciiz "\n1-Um jogo"
+menuItem3_2:		.asciiz "\n2-Partidas"
 
 menuItem3_1_1:		.asciiz "\nQual time quer trocar o nome ? ( Digite o numero correspondente )"
 menuItem3_1_2:		.asciiz "\nQual o novo nome ?"
+
+menuItem3_2_1:		.asciiz "\n1-Total de jogos"
+menuItem3_2_2:		.asciiz "\n2-Vitorias"
+menuItem3_2_3:		.asciiz "\n3-Derrotas"
+menuItem3_2_4:		.asciiz "\nEscolha o time:"
+menuItem3_2_5:		.asciiz "\nNovo valor:"
 
 menuItemInvalid:	.asciiz "\nOpcao errada, selecione novamente"
 
@@ -125,7 +131,7 @@ main:
 		jal registerResult
 		j main	
 	editMenuJAL:
-		jal editarMenu
+		jal edit_games
 		j main	
 	runResultsJAL:
 	#	jal runResults
@@ -545,3 +551,114 @@ leNovoNome10:
     jr $ra
 
 
+################# FUNCAO EDITAR VITORIAS/DERROTAS/JOGOS #################
+
+edit_games:
+
+	#salva RA na stack
+	sub $sp, $sp, 4
+	sw $ra, 0($sp)
+
+	# Print "o que gostaria de editar?"
+	la $a0, menuItem3Title
+	li $v0, 4
+	syscall
+
+	la $a0, menuItem3_2_1
+	syscall
+
+	la $a0, menuItem3_2_2
+	syscall
+
+	la $a0, menuItem3_2_3
+	syscall
+
+	# Receber valor
+	li $v0, 5
+	syscall
+	add $t5, $zero, $v0
+	subi $t5, $t5, 1
+
+	# Reseta o t0
+	add $t0, $zero, $zero
+
+LOOP_4:
+	addi $t0, $t0, 1
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+	
+	jal printaTimes
+
+	# Print nome do time
+	li $v0, 4
+	syscall
+	
+	# Print linha
+	la $a0, line
+	li $v0, 4
+	syscall
+
+	bne $t0, 10, LOOP_4
+
+	#printar "qual time quer editar?"
+	la $a0, menuItem3_2_4
+	li $v0, 4
+	syscall
+
+	# Receber valor
+	li $v0, 5
+	syscall
+	add $t7, $zero, $v0
+	subi $t7, $t7, 1
+
+
+	#printar "novo valor:"
+	la $a0, menuItem3_2_5
+	li $v0, 4
+	syscall
+
+	# Receber valor
+	li $v0, 5
+	syscall
+	add $t6, $zero, $v0
+
+	#em t7 tem o time e t5 tem a coluna t6 em o valor
+    
+	#add 1 jogo nesse time    
+    add $t0, $zero, $t7
+
+    #carrega o tamanho da matriz
+    addi $t1, $zero, 3
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna Jogos (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de Jogos
+    sll $t0, $t0, 5
+    
+    la $t1, gameTable
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    sw $t6, 0($t1)
+
+	#recupera $ra
+	lw $ra, 0($sp)
+	add $sp, $sp, 4
+
+    jr $ra
