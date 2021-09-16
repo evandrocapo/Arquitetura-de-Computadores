@@ -52,16 +52,29 @@ team10:				.space 20
 
 # LINHAS = TIME
 # COLUNAS = 0->TOTAL DE JOGOS | 1->VITORIAS | 2->DERROTAS
-gameTable:	.word 0, 0, 0,
-	        .word 0, 0, 0,
-        	.word 0, 0, 0,
-        	.word 0, 0, 0,
-        	.word 0, 0, 0,
-        	.word 0, 0, 0,
-			.word 0, 0, 0,
-			.word 0, 0, 0,
-			.word 0, 0, 0,
-	        .word 0, 0, 0
+gameTable:	.word 1, 11, 1,
+	        .word 1, 22, 1,
+        	.word 1, 33, 1,
+        	.word 1, 44, 1,
+        	.word 1, 55, 1,
+        	.word 1, 66, 1,
+			.word 1, 77, 1,
+			.word 1, 88, 1,
+			.word 1, 99, 1,
+	        .word 1, 110, 1
+
+gameTableAux:	.word 0, 0,
+				.word 0, 0,
+				.word 0, 0,
+				.word 0, 0,
+				.word 0, 0,
+				.word 0, 0,
+				.word 0, 0,
+				.word 0, 0,
+				.word 0, 0,
+				.word 0, 0
+
+
 
 .text
 .globl auth
@@ -134,7 +147,7 @@ main:
 		jal edit_games
 		j main	
 	runResultsJAL:
-	#	jal runResults
+		jal runResults
 		j main	
 
 
@@ -355,7 +368,7 @@ addOneGameToTime:
     add $t0, $t0, $t1
     
     #pega posicao da coluna de Jogos
-    sll $t0, $t0, 5
+    sll $t0, $t0, 2
     
     la $t1, gameTable
     add $t1, $t1, $t0
@@ -649,7 +662,7 @@ LOOP_4:
     add $t0, $t0, $t1
     
     #pega posicao da coluna de Jogos
-    sll $t0, $t0, 5
+    sll $t0, $t0, 2
     
     la $t1, gameTable
     add $t1, $t1, $t0
@@ -660,5 +673,145 @@ LOOP_4:
 	#recupera $ra
 	lw $ra, 0($sp)
 	add $sp, $sp, 4
+
+    jr $ra
+
+
+################# FUNCAO MOSTRAR RESULTADO FINAL #################
+runResults:
+	#salva RA na stack
+	sub $sp, $sp, 4
+	sw $ra, 0($sp)
+
+	jal addIdToGameTableAux
+
+	jal addWinsToGameTableAux
+
+
+	#recupera $ra
+	lw $ra, 0($sp)
+	add $sp, $sp, 4
+
+    jr $ra
+
+
+addIdToGameTableAux:
+	# inicia contadora em 1
+	addi $t2, $zero, 1
+
+LOOP_5:
+	#adicionar id do time
+	add $t5, $zero, $zero
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    subi $t0, $t0, 1 # pega a posi??o
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    add $t0, $zero, $t2
+    sw $t0, 0($t1)
+
+	#incrementa variavel
+	addi $t2, $t2, 1
+
+	bne $t2, 11, LOOP_5
+
+	jr $ra
+
+
+addWinsToGameTableAux:
+	# inicia contadora em 1
+	addi $t2, $zero, 1
+
+LOOP_6:
+
+	########### GET VALOR DE VITORIAS ##############
+
+	#adicionar id do time
+	addi $t5, $zero, 1
+
+	#add 1 jogo nesse time    
+    add $t0, $zero, $t2
+    subi $t0, $t0, 1 # pega a posi??o
+    
+    #carrega o tamanho da matriz
+    addi $t1, $zero, 3
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna Jogos (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de Jogos
+    sll $t0, $t0, 2
+    
+    la $t1, gameTable
+    add $t1, $t1, $t0
+    
+    #pegar jogos
+    lw $t4, 0($t1)
+
+
+	########### SAVE VALOR DE VITORIAS ##############
+
+
+	#adicionar id do time
+	addi $t5, $zero, 1
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    subi $t0, $t0, 1 # pega a posi??o
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    sw $t4, 0($t1)
+
+
+	#incrementa variavel
+	addi $t2, $t2, 1
+
+	bne $t2, 11, LOOP_6
 
     jr $ra
