@@ -30,6 +30,14 @@ menuItem3_2_3:		.asciiz "\n3-Derrotas"
 menuItem3_2_4:		.asciiz "\nEscolha o time:"
 menuItem3_2_5:		.asciiz "\nNovo valor:"
 
+# SubMenu 4
+
+menuItem4_1: 		.asciiz "\nClassificados: \n"
+menuItem4_2: 		.asciiz "\nQuartas de Finais \n"
+menuItem4_3: 		.asciiz "\nDesclassificados \n"
+menuItem4_4: 		.asciiz "\nRebaixados: \n"
+
+
 menuItemInvalid:	.asciiz "\nOpcao errada, selecione novamente"
 
 
@@ -695,6 +703,8 @@ LOOP_COMPARE:
 	bne $t9, 10, LOOP_COMPARE
 
 
+	jal show_result
+
 	#recupera $ra
 	lw $ra, 0($sp)
 	add $sp, $sp, 4
@@ -1099,3 +1109,325 @@ EXIT_COMPARE:
 
 	jr $ra
 
+
+######### SHOW RESULT #############
+
+show_result:
+	#salva RA na stack
+	sub $sp, $sp, 4
+	sw $ra, 0($sp)
+
+	#Printar Classificados:
+    la $a0, menuItem4_1
+    li $v0, 4
+    syscall
+
+#### PRIMEIRO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 1
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+	#Printar Espaco:
+    la $a0, line
+    li $v0, 4
+    syscall
+
+
+#### SEGUNDO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 2
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+
+
+	#Printar Quartas:
+    la $a0, menuItem4_2
+    li $v0, 4
+    syscall
+
+#### TERCEIRO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 3
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+	#Printar Espaco:
+    la $a0, line
+    li $v0, 4
+    syscall
+
+	
+#### QUARTO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 4
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+	#Printar Espaco:
+    la $a0, line
+    li $v0, 4
+    syscall
+
+#### QUINTO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 5
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+	#Printar Espaco:
+    la $a0, line
+    li $v0, 4
+    syscall
+	
+#### SEXTO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 6
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+	#Printar Desclassificados:
+    la $a0, menuItem4_3
+    li $v0, 4
+    syscall
+
+#### SETIMO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 7
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+	#Printar Espaco:
+    la $a0, line
+    li $v0, 4
+    syscall
+
+
+#### OITAVO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 8
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+	#Printar Rebaixados:
+    la $a0, menuItem4_4
+    li $v0, 4
+    syscall
+
+#### NONO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 9
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+	#Printar Espaco:
+    la $a0, line
+    li $v0, 4
+    syscall
+
+#### DECIMO TIME ####
+
+	#Primeiro Time
+	addi $t0, $zero, 10
+
+	# Print numero
+	li $v0, 1
+	add $a0, $t0, $zero
+	syscall
+
+	# Print hifen
+	la $a0, hyphen
+	li $v0, 4
+	syscall
+
+	
+	# Print nome do time
+	jal print_time_selected
+	jal printaTimes
+	li $v0, 4
+	syscall
+
+	#recupera $ra
+    lw $ra, 0($sp)
+    add $sp, $sp, 4
+
+
+	jr $ra
+
+
+
+print_time_selected:
+	#adicionar id do time
+	addi $t5, $zero, 0
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t0
+    subi $t0, $t0, 1 # pega a posi??o
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    lw $t0, 0($t1)
+
+	jr $ra
