@@ -687,10 +687,10 @@ runResults:
 
 	jal addWinsToGameTableAux
 
-	addi $t9, $t9, 0
+	addi $t9, $zero, 0
 
 LOOP_COMPARE:
-	#jal compareGameTable
+	jal compareGameTable
 	addi $t9,$t9, 1
 	bne $t9, 10, LOOP_COMPARE
 
@@ -964,7 +964,7 @@ IF_BIGGER:
 
 	# se t4 < t7
 	slt $t0, $t4, $t7 
-	bne $t0,$zero, EXIT_COMPARE
+	beq $t0,$zero, EXIT_COMPARE
 
 CHANGE_VALUE:
 
@@ -1094,7 +1094,8 @@ CHANGE_VALUE:
     sw $t4, 0($t1)
 
 EXIT_COMPARE:
-	bne $t2, 8, LOOP_7
+	addi $t2, $t2, 1
+	bne $t2, 10, LOOP_7
 
 	jr $ra
 
