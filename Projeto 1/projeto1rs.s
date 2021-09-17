@@ -60,16 +60,16 @@ team10:				.space 20
 
 # LINHAS = TIME
 # COLUNAS = 0->TOTAL DE JOGOS | 1->VITORIAS | 2->DERROTAS
-gameTable:	.word 1, 11, 1,
-	        .word 1, 22, 1,
-        	.word 1, 33, 1,
-        	.word 1, 44, 1,
-        	.word 1, 55, 1,
-        	.word 1, 66, 1,
-			.word 1, 77, 1,
-			.word 1, 88, 1,
-			.word 1, 99, 1,
-	        .word 1, 110, 1
+gameTable:	.word 0, 0, 0,
+	        .word 0, 0, 0,
+        	.word 0, 0, 0,
+        	.word 0, 0, 0,
+        	.word 0, 0, 0,
+        	.word 0, 0, 0,
+			.word 0, 0, 0,
+			.word 0, 0, 0,
+			.word 0, 0, 0,
+	        .word 0, 0, 0
 
 gameTableAux:	.word 0, 0,
 				.word 0, 0,
