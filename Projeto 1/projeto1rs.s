@@ -687,6 +687,13 @@ runResults:
 
 	jal addWinsToGameTableAux
 
+	addi $t9, $t9, 0
+
+LOOP_COMPARE:
+	#jal compareGameTable
+	addi $t9,$t9, 1
+	bne $t9, 10, LOOP_COMPARE
+
 
 	#recupera $ra
 	lw $ra, 0($sp)
@@ -694,6 +701,8 @@ runResults:
 
     jr $ra
 
+
+### ADD ID TO GAMETABLE
 
 addIdToGameTableAux:
 	# inicia contadora em 1
@@ -737,6 +746,8 @@ LOOP_5:
 
 	jr $ra
 
+
+### ADD WINS TO GAMETABLE
 
 addWinsToGameTableAux:
 	# inicia contadora em 1
@@ -815,3 +826,275 @@ LOOP_6:
 	bne $t2, 11, LOOP_6
 
     jr $ra
+
+
+### COMPARE AND SWITCH
+
+compareGameTable:
+	# inicia contadora em 1
+	addi $t2, $zero, 1
+LOOP_7:
+
+	########## PEGAR 1- TIME ##################
+
+	#adicionar id do time
+	addi $t5, $zero, 0
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    subi $t0, $t0, 1 # pega a posi??o
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    lw $t3, 0($t1)
+
+
+
+
+	#adicionar vitorias do time
+	addi $t5, $zero, 1
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    subi $t0, $t0, 1 # pega a posi??o
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    lw $t4, 0($t1)
+
+
+	########## PEGAR 2- TIME ##################
+
+	#adicionar id do time
+	addi $t5, $zero, 0
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    lw $t6, 0($t1)
+
+
+
+
+	#adicionar vitorias do time
+	addi $t5, $zero, 1
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    lw $t7, 0($t1)
+
+IF_BIGGER:
+
+	# se t4 < t7
+	slt $t0, $t4, $t7 
+	bne $t0,$zero, EXIT_COMPARE
+
+CHANGE_VALUE:
+
+	########## CHANGE 1- TIME ##################
+
+	#adicionar id do time
+	addi $t5, $zero, 0
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    subi $t0, $t0, 1 # pega a posi??o
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    sw $t6, 0($t1)
+
+
+
+
+	#adicionar vitorias do time
+	addi $t5, $zero, 1
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    subi $t0, $t0, 1 # pega a posi??o
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    sw $t7, 0($t1)
+
+
+		########## PEGAR 2- TIME ##################
+
+	#adicionar id do time
+	addi $t5, $zero, 0
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    sw $t3, 0($t1)
+
+
+
+
+	#adicionar vitorias do time
+	addi $t5, $zero, 1
+	
+	#add o id do time   ( INDEX )
+    add $t0, $zero, $t2
+    
+    #carrega o tamanho da matriz ( QUANTIDADE COLUNAS )
+    addi $t1, $zero, 2 
+
+    # $t0 index, $t1 quantidade de colunas
+    mult $t0, $t1
+    
+    # resultado do Index * Coluna
+    mflo $t0
+    
+    #carrega o valor da coluna id (0)
+    add $t1, $zero, $t5
+    add $t0, $t0, $t1
+    
+    #pega posicao da coluna de id
+    sll $t0, $t0, 2
+    
+    la $t1, gameTableAux
+    add $t1, $t1, $t0
+    
+    #somar jogos
+    sw $t4, 0($t1)
+
+EXIT_COMPARE:
+	bne $t2, 8, LOOP_7
+
+	jr $ra
+
