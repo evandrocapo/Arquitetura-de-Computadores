@@ -1,0 +1,85 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/simulation/modelsim
+Efull_adder
+Z1 w1631998487
+!i122 0
+R0
+Z2 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/full_adder.vhd
+Z3 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/full_adder.vhd
+l0
+L1 1
+V^gncoV5E934=gcb4L902?3
+!s100 [V>`81>nEWQ:T[1F`d:3^0
+Z4 OV;C;2020.1;71
+31
+Z5 !s110 1631998932
+!i10b 1
+Z6 !s108 1631998932.000000
+Z7 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/full_adder.vhd|
+Z8 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/full_adder.vhd|
+!i113 1
+Z9 o-93 -work work
+Z10 tExplicit 1 CvgOpt 0
+Afull_adder_arch
+DEx4 work 10 full_adder 0 22 ^gncoV5E934=gcb4L902?3
+!i122 0
+l13
+L12 5
+VKnl^iKRZGFPHDmEX8OQRo0
+!s100 <;RgnTANkEF84S^W7HD<<1
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Efull_adder_tb
+Z11 w1631998911
+!i122 1
+R0
+Z12 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/full_adder_tb.vhd
+Z13 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/full_adder_tb.vhd
+l0
+L1 1
+V87f8ncABh>[n<OZB7k>VJ0
+!s100 ^_=SghD_S_hH2FzT[31;Y2
+R4
+31
+R5
+!i10b 1
+R6
+Z14 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/full_adder_tb.vhd|
+!s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/full_adder_tb.vhd|
+!i113 1
+R9
+R10
+Afull_adder_tb_arch
+DEx4 work 13 full_adder_tb 0 22 87f8ncABh>[n<OZB7k>VJ0
+!i122 1
+l18
+L4 40
+VhUZlziT``7da@=YTWk@m;3
+!s100 7=lao?IL<_WlW0dAWa1Rn1
+R4
+31
+R5
+!i10b 1
+R6
+R14
+Z15 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/full_adder/full_adder_tb.vhd|
+!i113 1
+R9
+R10

@@ -1,0 +1,14 @@
+ENTITY ripple_carry IS
+	PORT (
+		a: IN BIT;
+		b: IN BIT;
+		c: OUT BIT;
+		d: IN BIT;
+		e: IN BIT
+	);
+END ENTITY ripple_carry;
+	
+ARCHITECTURE ripple_carry_arch OF ripple_carry IS
+BEGIN
+	c <= (a AND b) NOR (d AND e);
+END ripple_carry_arch;
