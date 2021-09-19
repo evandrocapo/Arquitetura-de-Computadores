@@ -1,0 +1,157 @@
+|alu
+op[0] => Equal0.IN1
+op[0] => Equal1.IN1
+op[1] => Equal0.IN0
+op[1] => Equal1.IN0
+x1 => ripple_carry:ripple.x1
+x2 => ripple_carry:ripple.x2
+x3 => ripple_carry:ripple.x3
+x4 => ripple_carry:ripple.x4
+x5 => ripple_carry:ripple.x5
+x6 => ripple_carry:ripple.x6
+x7 => ripple_carry:ripple.x7
+x8 => ripple_carry:ripple.x8
+y1 => ripple_carry:ripple.y1
+y2 => ripple_carry:ripple.y2
+y3 => ripple_carry:ripple.y3
+y4 => ripple_carry:ripple.y4
+y5 => ripple_carry:ripple.y5
+y6 => ripple_carry:ripple.y6
+y7 => ripple_carry:ripple.y7
+y8 => ripple_carry:ripple.y8
+s1 << ripple_carry:ripple.s1
+s2 << ripple_carry:ripple.s2
+s3 << ripple_carry:ripple.s3
+s4 << ripple_carry:ripple.s4
+s5 << ripple_carry:ripple.s5
+s6 << ripple_carry:ripple.s6
+s7 << ripple_carry:ripple.s7
+s8 << ripple_carry:ripple.s8
+overflow << ripple_carry:ripple.overflow
+
+
+|alu|ripple_carry:ripple
+x1 => full_adder:SomadorOutput1.x
+x2 => full_adder:SomadorOutput2.x
+x3 => full_adder:SomadorOutput3.x
+x4 => full_adder:SomadorOutput4.x
+x5 => full_adder:SomadorOutput5.x
+x6 => full_adder:SomadorOutput6.x
+x7 => full_adder:SomadorOutput7.x
+x8 => full_adder:SomadorOutput8.x
+y1 => yt1.IN0
+y2 => yt2.IN0
+y3 => yt3.IN0
+y4 => yt4.IN0
+y5 => yt5.IN0
+y6 => yt6.IN0
+y7 => yt7.IN0
+y8 => yt8.IN0
+t => yt1.IN1
+t => yt2.IN1
+t => yt3.IN1
+t => yt4.IN1
+t => yt5.IN1
+t => yt6.IN1
+t => yt7.IN1
+t => yt8.IN1
+t => full_adder:SomadorOutput1.cin
+s1 <= full_adder:SomadorOutput1.s
+s2 <= full_adder:SomadorOutput2.s
+s3 <= full_adder:SomadorOutput3.s
+s4 <= full_adder:SomadorOutput4.s
+s5 <= full_adder:SomadorOutput5.s
+s6 <= full_adder:SomadorOutput6.s
+s7 <= full_adder:SomadorOutput7.s
+s8 <= full_adder:SomadorOutput8.s
+overflow <= full_adder:SomadorOutput8.cout
+
+
+|alu|ripple_carry:ripple|full_adder:SomadorOutput1
+x => s.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_carry:ripple|full_adder:SomadorOutput2
+x => s.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_carry:ripple|full_adder:SomadorOutput3
+x => s.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_carry:ripple|full_adder:SomadorOutput4
+x => s.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_carry:ripple|full_adder:SomadorOutput5
+x => s.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_carry:ripple|full_adder:SomadorOutput6
+x => s.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_carry:ripple|full_adder:SomadorOutput7
+x => s.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|ripple_carry:ripple|full_adder:SomadorOutput8
+x => s.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

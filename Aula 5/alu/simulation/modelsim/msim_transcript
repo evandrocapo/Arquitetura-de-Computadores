@@ -1,0 +1,153 @@
+# Reading pref.tcl
+# do alu_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/full_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:08:03 on Sep 18,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/full_adder.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity full_adder
+# -- Compiling architecture full_adder_arch of full_adder
+# End time: 23:08:04 on Sep 18,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/ripple_carry.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:08:04 on Sep 18,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/ripple_carry.vhd 
+# -- Loading package STANDARD
+# -- Loading entity full_adder
+# -- Compiling entity ripple_carry
+# -- Compiling architecture ripple_carry_arch of ripple_carry
+# End time: 23:08:04 on Sep 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:08:04 on Sep 18,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading entity full_adder
+# -- Loading entity ripple_carry
+# -- Compiling entity alu
+# -- Compiling architecture alu_arch of alu
+# End time: 23:08:04 on Sep 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:08:04 on Sep 18,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading entity full_adder
+# -- Loading entity ripple_carry
+# -- Loading entity alu
+# -- Compiling entity alu_tb
+# -- Compiling architecture alu_tb_arch of alu_tb
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(47): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(47): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(47): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(47): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(49): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(49): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(49): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(49): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(51): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(51): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(51): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(51): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(52): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(52): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(52): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(52): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(53): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(53): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(53): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(53): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(56): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(56): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(56): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(56): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(57): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(57): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(57): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(57): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(58): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(58): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(58): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(58): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(59): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(59): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(59): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(59): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(60): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(60): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(60): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(60): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(61): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(61): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(61): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(61): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 23:08:04 on Sep 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 69
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  alu_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" alu_tb 
+# Start time: 23:08:04 on Sep 18,2021
+# Loading std.standard
+# Loading work.alu_tb(alu_tb_arch)
+# Loading work.alu(alu_arch)
+# Loading work.ripple_carry(ripple_carry_arch)
+# Loading work.full_adder(full_adder_arch)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 23:17:12 on Sep 18,2021, Elapsed time: 0:09:08
+# Errors: 0, Warnings: 0

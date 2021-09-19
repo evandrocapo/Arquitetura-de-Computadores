@@ -1,0 +1,30 @@
+USE work.full_adder;
+
+ENTITY ripple_carry IS
+	PORT (
+		x1: IN BIT;
+		x2: IN BIT;
+		x3: IN BIT;
+		x4: IN BIT;
+		y1: IN BIT;
+		y2: IN BIT;
+		y3: IN BIT;
+		y4: IN BIT;
+		s1: OUT BIT;
+		s2: OUT BIT;
+		s3: OUT BIT;
+		s4: OUT BIT;
+		overflow: OUT BIT
+	);
+END ENTITY;
+	
+ARCHITECTURE ripple_carry_arch OF ripple_carry IS
+	SIGNAL 		cout1: BIT;
+	SIGNAL		cout2: BIT;
+	SIGNAL		cout3: BIT;
+
+	
+BEGIN
+	SomadorOutput1: full_adder PORT MAP(x1, y1, '0', S1, cout1);
+
+END;

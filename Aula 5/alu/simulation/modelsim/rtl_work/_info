@@ -1,0 +1,162 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/simulation/modelsim
+Ealu
+Z1 w1632016598
+Z2 DEx4 work 12 ripple_carry 0 22 m9XGi3WS]dQL5MNJ^;ePM1
+!i122 2
+R0
+Z3 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu.vhd
+Z4 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu.vhd
+l0
+L3 1
+V@JZaEKk87B1_n<<J8Y:5U0
+!s100 <2]=>9UZHJYRo=`IR2]fg0
+Z5 OV;C;2020.1;71
+31
+Z6 !s110 1632017284
+!i10b 1
+Z7 !s108 1632017284.000000
+Z8 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu.vhd|
+Z9 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu.vhd|
+!i113 1
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Aalu_arch
+Z12 DEx4 work 3 alu 0 22 @JZaEKk87B1_n<<J8Y:5U0
+!i122 2
+l74
+L34 52
+VD9EH2NdV3:X7<B39YMXM31
+!s100 ceTinXEGKCIFa7Re5c`zn0
+R5
+31
+R6
+!i10b 1
+R7
+R8
+R9
+!i113 1
+R10
+R11
+Ealu_tb
+Z13 w1632017072
+R12
+!i122 3
+R0
+Z14 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd
+Z15 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd
+l0
+L3 1
+V5SO=2_UZ4f]`fj`@6Z30K1
+!s100 cd?CWKj1XP<MjK@:mEfa?1
+R5
+31
+R6
+!i10b 1
+R7
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd|
+!s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd|
+!i113 1
+R10
+R11
+Aalu_tb_arch
+DEx4 work 6 alu_tb 0 22 5SO=2_UZ4f]`fj`@6Z30K1
+!i122 3
+l41
+L6 59
+V_8TiIjml5i^d23SM0R4m10
+!s100 5H26;g;<lQ8FomX_hINaJ1
+R5
+31
+R6
+!i10b 1
+R7
+R16
+Z17 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/alu_tb.vhd|
+!i113 1
+R10
+R11
+Efull_adder
+Z18 w1632012997
+!i122 0
+R0
+Z19 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/full_adder.vhd
+Z20 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/full_adder.vhd
+l0
+L1 1
+VkblUC=7e0z^Yh7CQ0d9bG2
+!s100 cUJ58j8djoRC?54];AW072
+R5
+31
+R6
+!i10b 1
+Z21 !s108 1632017283.000000
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/full_adder.vhd|
+Z23 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/full_adder.vhd|
+!i113 1
+R10
+R11
+Afull_adder_arch
+Z24 DEx4 work 10 full_adder 0 22 kblUC=7e0z^Yh7CQ0d9bG2
+!i122 0
+l13
+L12 5
+VLiJ?0>Ifdi52QloRN]iMZ2
+!s100 Y4EPf[6[Fg2k3]=iEa;0g1
+R5
+31
+R6
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R10
+R11
+Eripple_carry
+Z25 w1632016944
+R24
+!i122 1
+R0
+Z26 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/ripple_carry.vhd
+Z27 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/ripple_carry.vhd
+l0
+L3 1
+Vm9XGi3WS]dQL5MNJ^;ePM1
+!s100 a48I`g]6fU2DLY>[o@H^<3
+R5
+31
+R6
+!i10b 1
+R7
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/ripple_carry.vhd|
+Z29 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 5/alu/ripple_carry.vhd|
+!i113 1
+R10
+R11
+Aripple_carry_arch
+R2
+!i122 1
+l61
+L34 46
+V5Y@cnYlgB7[joUf1C?iKU1
+!s100 U@H]>X24d?81?jCgQFcG50
+R5
+31
+R6
+!i10b 1
+R7
+R28
+R29
+!i113 1
+R10
+R11
