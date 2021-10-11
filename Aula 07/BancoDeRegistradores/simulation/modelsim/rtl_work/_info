@@ -1,0 +1,124 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/simulation/modelsim
+Ebancoderegistradores
+Z1 w1633995602
+Z2 DEx4 work 13 registradores 0 22 <z;]D;c:zHF06OY^Ef]?K0
+!i122 1
+R0
+Z3 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores.vhd
+Z4 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores.vhd
+l0
+L3 1
+VCAj]P7<nS:PFSUSKoA0Qo1
+!s100 PE?NP9Wie4_CU`H6_aHkW0
+Z5 OV;C;2020.1;71
+31
+Z6 !s110 1633995758
+!i10b 1
+Z7 !s108 1633995758.000000
+Z8 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores.vhd|
+Z9 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores.vhd|
+!i113 1
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Abancoderegistradores_arch
+Z12 DEx4 work 20 bancoderegistradores 0 22 CAj]P7<nS:PFSUSKoA0Qo1
+!i122 1
+l34
+L16 70
+VZgWTZeRC;z]>cSf3>cPFn3
+!s100 PZOSR>4X:bH30<[]dZV^50
+R5
+31
+R6
+!i10b 1
+R7
+R8
+R9
+!i113 1
+R10
+R11
+Ebancoderegistradores_tb
+Z13 w1633995738
+R12
+!i122 2
+R0
+Z14 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd
+Z15 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd
+l0
+L3 1
+VnKmHA4EZKOC@<kz2E?INj3
+!s100 cjP]`d;>MQg@Wk]kin5@63
+R5
+31
+Z16 !s110 1633995759
+!i10b 1
+Z17 !s108 1633995759.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd|
+!s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd|
+!i113 1
+R10
+R11
+Abancoderegistradores_tb_arch
+DEx4 work 23 bancoderegistradores_tb 0 22 nKmHA4EZKOC@<kz2E?INj3
+!i122 2
+l24
+L6 32
+VnG>SBK6[nSCbJnV_e?oXz3
+!s100 l1SfG6mTH9hSZ<e54QVOF0
+R5
+31
+R16
+!i10b 1
+R17
+R18
+Z19 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd|
+!i113 1
+R10
+R11
+Eregistradores
+Z20 w1633988670
+!i122 0
+R0
+Z21 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/registradores.vhd
+Z22 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/registradores.vhd
+l0
+L1 1
+V<z;]D;c:zHF06OY^Ef]?K0
+!s100 oVI6D[>mKHE<e>fiHSj;93
+R5
+31
+R6
+!i10b 1
+R7
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/registradores.vhd|
+Z24 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/registradores.vhd|
+!i113 1
+R10
+R11
+Aregistradores_arch
+R2
+!i122 0
+l12
+L9 13
+V8=`CKc]K==Wgh53NHJJ^12
+!s100 C4zEd<Len2FcZhWBXoikK3
+R5
+31
+R6
+!i10b 1
+R7
+R23
+R24
+!i113 1
+R10
+R11

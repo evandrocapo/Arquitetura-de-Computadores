@@ -1,0 +1,15 @@
+ENTITY full_adder IS
+	PORT (
+		x: IN BIT_VECTOR(7 downto 0);
+		regWrite: IN BIT;
+	);
+END ENTITY;
+	
+ARCHITECTURE full_adder_arch OF full_adder IS
+process(regWrite)
+	begin
+		if regWrite = '1' then
+			x <= 0;
+		end if
+	end process;
+END;

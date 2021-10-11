@@ -1,0 +1,85 @@
+# Reading pref.tcl
+# do BancoDeRegistradores_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/registradores.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:42:38 on Oct 11,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/registradores.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity registradores
+# -- Compiling architecture registradores_arch of registradores
+# End time: 20:42:38 on Oct 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:42:38 on Oct 11,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores.vhd 
+# -- Loading package STANDARD
+# -- Loading entity registradores
+# -- Compiling entity BancoDeRegistradores
+# -- Compiling architecture BancoDeRegistradores_arch of BancoDeRegistradores
+# End time: 20:42:38 on Oct 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:42:39 on Oct 11,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading entity registradores
+# -- Loading entity BancoDeRegistradores
+# -- Compiling entity BancoDeRegistradores_tb
+# -- Compiling architecture BancoDeRegistradores_tb_arch of BancoDeRegistradores_tb
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(27): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(27): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(27): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(27): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(27): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(29): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(29): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(29): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(29): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(29): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(31): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(31): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(31): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(31): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(31): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Aula 07/BancoDeRegistradores_tb.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 20:42:39 on Oct 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 25
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  BancoDeRegistradores_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" BancoDeRegistradores_tb 
+# Start time: 20:42:39 on Oct 11,2021
+# Loading std.standard
+# Loading work.bancoderegistradores_tb(bancoderegistradores_tb_arch)
+# Loading work.bancoderegistradores(bancoderegistradores_arch)
+# Loading work.registradores(registradores_arch)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 20:45:08 on Oct 11,2021, Elapsed time: 0:02:29
+# Errors: 0, Warnings: 0

@@ -1,0 +1,133 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dataOut1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "regWriteCond",
+					"strict" : false
+				},
+				{
+					"name" : "regWrite[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regWrite[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
