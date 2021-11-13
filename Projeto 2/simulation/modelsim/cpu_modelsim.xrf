@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd
+source_file = 1, C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd
+source_file = 1, C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd
+source_file = 1, C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd
+source_file = 1, C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/pc.vhd
+source_file = 1, C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd
+source_file = 1, C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/db/cpu.cbx.xml
+design_name = hard_block
+design_name = cpu
+instance = comp, \clk~input\, clk~input, cpu, 1

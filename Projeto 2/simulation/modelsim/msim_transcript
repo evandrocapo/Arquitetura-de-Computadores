@@ -1,0 +1,138 @@
+# Reading pref.tcl
+# do cpu_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:16:56 on Nov 13,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity reg_instr
+# -- Compiling architecture reg_instr_arq of reg_instr
+# End time: 18:16:56 on Nov 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:16:56 on Nov 13,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity ula
+# -- Compiling architecture ula_arq of ula
+# End time: 18:16:56 on Nov 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:16:56 on Nov 13,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity banco_de_registradores
+# -- Compiling architecture banco_de_registradores_arq of banco_de_registradores
+# End time: 18:16:56 on Nov 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:16:56 on Nov 13,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uc
+# -- Compiling architecture uc_arq of uc
+# End time: 18:16:57 on Nov 13,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:16:57 on Nov 13,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memoria_principal
+# -- Compiling architecture memoria_principal_arq of memoria_principal
+# End time: 18:16:57 on Nov 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:16:57 on Nov 13,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading entity memoria_principal
+# -- Compiling entity cpu
+# -- Compiling architecture cpu_arq of cpu
+# End time: 18:16:57 on Nov 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.cpu
+# vsim work.cpu 
+# Start time: 18:16:58 on Nov 13,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cpu(cpu_arq)
+# Loading work.memoria_principal(memoria_principal_arq)
+# Loading work.reg_instr(reg_instr_arq)
+# Loading work.uc(uc_arq)
+# Loading work.banco_de_registradores(banco_de_registradores_arq)
+# Loading work.ula(ula_arq)
+add wave -position insertpoint  \
+sim:/cpu/clk \
+sim:/cpu/pcOut \
+sim:/cpu/opcode \
+sim:/cpu/regOne \
+sim:/cpu/regTwo \
+sim:/cpu/regThree \
+sim:/cpu/ALUop \
+sim:/cpu/regWrite \
+sim:/cpu/regOneValue \
+sim:/cpu/regTwoValue \
+sim:/cpu/overflow \
+sim:/cpu/cout \
+sim:/cpu/resultALu
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Evandro  Hostname: DESKTOP-PU8L0FA  ProcessID: 10312
+#           Attempting to use alternate WLF file "./wlfts896zr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts896zr
+force -freeze sim:/cpu/clk 0 0, 1 {50 ps} -r 100
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Banco
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Banco
+# End time: 18:19:41 on Nov 13,2021, Elapsed time: 0:02:43
+# Errors: 0, Warnings: 4

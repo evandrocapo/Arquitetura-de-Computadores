@@ -4,11 +4,9 @@ USE IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all ;
 ENTITY uc IS
 	PORT (
-		opcode        : IN std_logic_vector(3 DOWNTO 0);
-		regDst        : OUT std_logic;
-		ALUop         : OUT std_logic_vector(1 DOWNTO 0);
-		ALUsrc        : OUT std_logic;
-		regWrite      : OUT std_logic
+		opcode        : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		ALUop         : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+		regWrite      : OUT STD_LOGIC
 	);
 END uc;
 
@@ -19,29 +17,19 @@ BEGIN
 	BEGIN
 		CASE opcode IS
 			WHEN "00" => -- add
-				regDst        <= '0';
 				ALUop         <= "10";
-				ALUsrc        <= '0';
-				regWrite      <= '0';
+				regWrite      <= '1';
 			WHEN "01" => -- sub
-				regDst        <= '0';
 				ALUop         <= "11";
-				ALUsrc        <= '0';
-				regWrite      <= '0';
+				regWrite      <= '1';
 			WHEN "10" => -- beq
-				regDst        <= '0';
 				ALUop         <= "01";
-				ALUsrc        <= '0';
 				regWrite      <= '0';
 			WHEN "11" => -- jmp
-				regDst        <= '0';
 				ALUop         <= "00";
-				ALUsrc        <= '0';
 				regWrite      <= '0';
 			WHEN OTHERS => NULL;
-				regDst        <= '0';
 				ALUop         <= "00";
-				ALUsrc        <= '0';
 				regWrite      <= '0';
 		END CASE;
 	END PROCESS;

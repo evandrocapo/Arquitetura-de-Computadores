@@ -5,19 +5,20 @@ use ieee.numeric_std.all;
 
 ENTITY memoria_principal IS PORT
 	(
-		ReadAddress : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		Instruction : OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+		ReadAddress : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		Instruction : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 		
 	);
 END memoria_principal;
 
 ARCHITECTURE memoria_principal_arq OF memoria_principal IS
 
-	TYPE memoria IS ARRAY(0 to 254) OF std_logic_vector(15 DOWNTO 0); -- tipo I e tipo R
-	SIGNAL memoria_instrucao : memoria := ("00 11 10 01 0000 0000", -- OP = ADD rs = 11 rt = 10 rd = 01
-													  "01 11 01 10 0000 0000", -- OP = SUB  rs = 11 rt = 01 rd = 10
-													  "10 11 01 10 0000 0000", -- OP = BEQ  rs = 11 rt = 01 rd = 00 end = 0000 0000
-													  "11 0000 00 0000 0000", -- OP = JMP	 end = 0000 00
+	TYPE memoria IS ARRAY(0 to 4) OF std_logic_vector(7 DOWNTO 0); -- tipo I e tipo R
+	SIGNAL memoria_instrucao : memoria := ("00011000", -- OP = ADD rs = 01 rt = 10 rd = 00
+													  "01110110", -- OP = SUB  rs = 11 rt = 01 rd = 10
+													  "10110100", -- OP = BEQ  rs = 11 rt = 01 rd = 00
+													  "00001000", -- END = 0000 0004
+													  "11000000" -- OP = JMP	 end = 0000 00
 													 );
 
 BEGIN 

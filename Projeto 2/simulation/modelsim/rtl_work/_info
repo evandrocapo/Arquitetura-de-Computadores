@@ -1,0 +1,288 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/simulation/modelsim
+Ebanco_de_registradores
+Z1 w1636837425
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z7 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd
+Z8 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd
+l0
+L6 1
+VVzizofH]>YE]FQAOb[aC;3
+!s100 ^4K;]cO=D1NL5gmG4]NK^2
+Z9 OV;C;2020.1;71
+31
+Z10 !s110 1636838216
+!i10b 1
+Z11 !s108 1636838216.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd|
+Z13 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd|
+!i113 1
+Z14 o-93 -work work
+Z15 tExplicit 1 CvgOpt 0
+Abanco_de_registradores_arq
+R2
+R3
+R4
+R5
+R6
+DEx4 work 22 banco_de_registradores 0 22 VzizofH]>YE]FQAOb[aC;3
+!i122 2
+l29
+L19 22
+Vi1Lc`3J0J]_ocziIlhAZ72
+!s100 gHm^KGL]ZjVRX_]1miSND1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Ecpu
+Z16 w1636837709
+R2
+R4
+Z17 DEx4 work 17 memoria_principal 0 22 :Y:B:BI>Hne5W5FNEo33I2
+R3
+Z18 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R5
+R6
+!i122 5
+R0
+Z19 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd
+Z20 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd
+l0
+L6 1
+VkaDWD^TeIi782?alOc8a=1
+!s100 ed53hUza<kN?`EVQB1NZ>3
+R9
+31
+Z21 !s110 1636838217
+!i10b 1
+Z22 !s108 1636838217.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd|
+!s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd|
+!i113 1
+R14
+R15
+Acpu_arq
+R2
+R4
+R3
+R18
+R5
+R6
+DEx4 work 3 cpu 0 22 kaDWD^TeIi782?alOc8a=1
+!i122 5
+l96
+L12 92
+VVO?15f<i<QmH6n3W8NS`i0
+!s100 =Hcd5MbMiRaMXoi7@cAg32
+R9
+31
+R21
+!i10b 1
+R22
+R23
+Z24 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd|
+!i113 1
+R14
+R15
+Ememoria_principal
+Z25 w1636833907
+R2
+R3
+R4
+R5
+R6
+!i122 4
+R0
+Z26 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd
+Z27 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd
+l0
+L6 1
+V:Y:B:BI>Hne5W5FNEo33I2
+!s100 ^B0BN07SF7?Y]TTcOEPZ^2
+R9
+31
+R21
+!i10b 1
+R22
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd|
+Z29 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd|
+!i113 1
+R14
+R15
+Amemoria_principal_arq
+R2
+R3
+R4
+R5
+R6
+R17
+!i122 4
+l24
+L14 15
+VRV>[VKNi?]Te9zg`EAAib3
+!s100 ^?3XY3QIhdJ`SalD_GLk:0
+R9
+31
+R21
+!i10b 1
+R22
+R28
+R29
+!i113 1
+R14
+R15
+Ereg_instr
+Z30 w1636836551
+R18
+R3
+R5
+R6
+!i122 0
+R0
+Z31 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd
+Z32 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd
+l0
+L6 1
+Vn8ZWBn@BN?8fG<AG=cC2]1
+!s100 YJD`d3dD?Kg8O1HnD:PEd0
+R9
+31
+R10
+!i10b 1
+R11
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd|
+Z34 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd|
+!i113 1
+R14
+R15
+Areg_instr_arq
+R18
+R3
+R5
+R6
+DEx4 work 9 reg_instr 0 22 n8ZWBn@BN?8fG<AG=cC2]1
+!i122 0
+l18
+L17 12
+V0L>VI`NlTf_FF3bT?J?lm2
+!s100 z3]_KTceDfC8OcNXGhQca0
+R9
+31
+R10
+!i10b 1
+R11
+R33
+R34
+!i113 1
+R14
+R15
+Euc
+Z35 w1636836741
+R2
+R5
+R6
+!i122 3
+R0
+Z36 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd
+Z37 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd
+l0
+L5 1
+V:8j=If7^7UXnDUS@[zAha3
+!s100 PSoTZL[TmL@1UggmVFEU:2
+R9
+31
+R21
+!i10b 1
+R11
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd|
+Z39 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd|
+!i113 1
+R14
+R15
+Auc_arq
+R2
+R5
+R6
+DEx4 work 2 uc 0 22 :8j=If7^7UXnDUS@[zAha3
+!i122 3
+l15
+L13 24
+V>lMcSI:^hnW5E26Fkkj:l1
+!s100 PAQRE]0e^OA@>lSN88QfW1
+R9
+31
+R21
+!i10b 1
+R11
+R38
+R39
+!i113 1
+R14
+R15
+Eula
+Z40 w1636838129
+R3
+R4
+R5
+R6
+!i122 1
+R0
+Z41 8C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd
+Z42 FC:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd
+l0
+L5 1
+VA1nHEN@;R0VZXDMN^WT]F2
+!s100 CKil[NR]b`Z5<KSY<^KWj0
+R9
+31
+R10
+!i10b 1
+R11
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd|
+Z44 !s107 C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd|
+!i113 1
+R14
+R15
+Aula_arq
+R3
+R4
+R5
+R6
+DEx4 work 3 ula 0 22 A1nHEN@;R0VZXDMN^WT]F2
+!i122 1
+l19
+L14 26
+Vmgb;zQ@U9UO3X<9f=_dB21
+!s100 dnWd<aaAWX_D0hcWNfI4Z3
+R9
+31
+R10
+!i10b 1
+R11
+R43
+R44
+!i113 1
+R14
+R15
