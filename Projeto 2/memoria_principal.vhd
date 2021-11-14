@@ -15,10 +15,10 @@ ARCHITECTURE memoria_principal_arq OF memoria_principal IS
 
 	TYPE memoria IS ARRAY(0 to 4) OF std_logic_vector(7 DOWNTO 0); -- tipo I e tipo R
 	SIGNAL memoria_instrucao : memoria := ("00011000", -- OP = ADD rs = 01 rt = 10 rd = 00
-													  "01110110", -- OP = SUB  rs = 11 rt = 01 rd = 10
+													  "01001100", -- OP = SUB  rs = 00 rt = 11 rd = 00
+													  "11000000", -- OP = JMP	 end = 0000 11 ( endereço 3 )
 													  "10110100", -- OP = BEQ  rs = 11 rt = 01 rd = 00
-													  "00001000", -- END = 0000 0004
-													  "11000000" -- OP = JMP	 end = 0000 00
+													  "00001000" -- END = 0000 0004
 													 );
 
 BEGIN 

@@ -27,7 +27,7 @@ ARCHITECTURE banco_de_registradores_arq OF banco_de_registradores IS
 														"00000011" -- $R4
 														);
 BEGIN
- PROCESS(RegWrite, Clk)
+ PROCESS(RegWrite, clk)
  BEGIN 
 	IF (RegWrite = '1') AND (clk'EVENT and clk='0') THEN
 		Registradores(TO_INTEGER(UNSIGNED(WriteRegister))) <= WriteData;

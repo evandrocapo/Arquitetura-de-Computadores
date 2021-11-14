@@ -17,21 +17,23 @@ ARCHITECTURE ula_arq OF ula IS
 	SIGNAL E : STD_LOGIC_VECTOR(7 DOWNTO 0);
 	SIGNAL Ou : STD_LOGIC_VECTOR(7 DOWNTO 0);
 BEGIN
-PROCESS(A, B, Op, E, Ou, Sum, Sub, Clk)
+PROCESS(clk, A, B, Op, E, Ou, Sum, Sub)
 	BEGIN
-		IF clk'EVENT and clk='1' THEN
+		IF clk='1' THEN
 				E <= A AND B;
 				Ou <= A OR B;
 				Sum <= A + B;
 				Sub <= A - B;
 		
-				CASE Op IS
-					WHEN "00" => R <= E;
-					WHEN "01" => R <= Ou;
-					WHEN "10" => R <= Sum;
-					WHEN "11" => R <= Sub;
-					WHEN OTHERS => R <= "ZZZZZZZZ";
-				END CASE;
+				IF Op = "00" THEN
+					R <= E;
+				ELSIF Op = "01" THEN
+				   R <= Ou;
+				ELSIF Op = "10" THEN
+				   R <= Sum;
+				ELSE
+				   R <= Sub;
+				END IF;
 		END IF;
 	END PROCESS;
 

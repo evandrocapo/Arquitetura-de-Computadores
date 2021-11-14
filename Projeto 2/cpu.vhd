@@ -1,7 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
-USE work.memoria_principal;
+USE work.ALL;
 
 ENTITY cpu IS
 	PORT (
@@ -28,15 +28,19 @@ COMPONENT reg_instr IS
 		opcode  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 		regOne  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 		regTwo  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-		regThree  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+		regThree  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+		JumpAddress   : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+		jmp : IN STD_LOGIC
 	);
 END COMPONENT reg_instr;
 
 -- Declare uc component
 COMPONENT uc IS
 	PORT (
+		clk			  : IN BIT;
 		opcode        : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		ALUop         : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+		jmp      : OUT STD_LOGIC;
 		regWrite      : OUT STD_LOGIC
 	);
 END COMPONENT uc;
@@ -66,39 +70,45 @@ PORT (
 	);
 END COMPONENT ula;
 
----- Declare pc component
---COMPONENT pc IS
---	PORT (
---		pcIn   : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
---		pcOut  : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
---	);
---END COMPONENT pc;
+-- Declare pc component
+COMPONENT pc IS
+	PORT (
+		clk	 : IN BIT;
+		pcIn   : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		pcJmp  : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+		jmp	 : IN STD_LOGIC;
+		pcOut  : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END COMPONENT pc;
 
 -- Signals declaration
 
-SIGNAL pcOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL memOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 SIGNAL opcode: STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL regOne: STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL regTwo: STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL regThree: STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL JumpAddress: STD_LOGIC_VECTOR(5 DOWNTO 0);
 
 SIGNAL ALUop: STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL jmp: STD_LOGIC;
 SIGNAL regWrite: STD_LOGIC;
 
 SIGNAL regOneValue: STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL regTwoValue: STD_LOGIC_VECTOR(7 DOWNTO 0);
 
-SIGNAL overflow: STD_LOGIC;
-SIGNAL cout: STD_LOGIC;
 SIGNAL resultALu : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
+SIGNAL pcOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
 BEGIN
-	MEM: memoria_principal PORT MAP("00000000", pcOut);
-	REG_INST: reg_instr PORT MAP(clk, pcOut, opcode, regOne, regTwo, regThree);
-	U_C: uc PORT MAP(opcode, ALUop, regWrite);
-	Banco: banco_de_registradores PORT MAP(clk, regWrite, regOne, regTwo, regThree, resultALu, regOneValue, regTwoValue);
-	U_L_A: ula PORT MAP(clk, regOneValue, regTwoValue, ALUop, resultALu);
+--	P_C: pc PORT MAP(clk, "00000000", JumpAddress, jmp, pcOut);
+--	MEM: memoria_principal PORT MAP(pcOut, memOut);
+--	REG_INST: reg_instr PORT MAP(clk, memOut, opcode, regOne, regTwo, regThree, JumpAddress, jmp);
+--	U_C: uc PORT MAP(clk, opcode, ALUop, jmp, regWrite);
+--	U_L_A: ula PORT MAP(clk, regOneValue, regTwoValue, ALUop, resultALu);
+--	Banco: banco_de_registradores PORT MAP(clk, regWrite, regOne, regTwo, regThree, resultALu, regOneValue, regTwoValue);
 	
 END cpu_arq;
 

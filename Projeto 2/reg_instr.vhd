@@ -10,7 +10,9 @@ ENTITY reg_instr IS
 		opcode  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 		regOne  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 		regTwo  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-		regThree  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+		regThree  : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+		JumpAddress   : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+		jmp : IN STD_LOGIC
 	);
 END reg_instr;
 
@@ -18,11 +20,12 @@ ARCHITECTURE reg_instr_arq OF reg_instr IS
 BEGIN
 PROCESS(clk)
 	BEGIN
-		IF clk'EVENT and clk='1' THEN
+		IF clk'EVENT and clk='1' and jmp = '0' THEN
 			  	opcode <= regInstructionIn(7 DOWNTO 6);
 				regOne <= regInstructionIn(5 DOWNTO 4);
 				regTwo <= regInstructionIn(3 DOWNTO 2);
 				regThree <= regInstructionIn(1 DOWNTO 0);
+				JumpAddress <= regInstructionIn(5 DOWNTO 0);
 		END IF;
 	END PROCESS;
 END reg_instr_arq;
