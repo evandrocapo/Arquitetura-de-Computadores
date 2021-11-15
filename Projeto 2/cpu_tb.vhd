@@ -101,6 +101,8 @@ SIGNAL pcOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 SIGNAL clk :  BIT;
 
+SIGNAL jmp_realizado : BIT;
+
 BEGIN
 	P_C: pc PORT MAP(clk, "00000000", JumpAddress, jmp, pcOut);
 	MEM: memoria_principal PORT MAP(pcOut, memOut);

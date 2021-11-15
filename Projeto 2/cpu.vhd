@@ -103,12 +103,12 @@ SIGNAL resultALu : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL pcOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 BEGIN
---	P_C: pc PORT MAP(clk, "00000000", JumpAddress, jmp, pcOut);
---	MEM: memoria_principal PORT MAP(pcOut, memOut);
---	REG_INST: reg_instr PORT MAP(clk, memOut, opcode, regOne, regTwo, regThree, JumpAddress, jmp);
---	U_C: uc PORT MAP(clk, opcode, ALUop, jmp, regWrite);
---	U_L_A: ula PORT MAP(clk, regOneValue, regTwoValue, ALUop, resultALu);
---	Banco: banco_de_registradores PORT MAP(clk, regWrite, regOne, regTwo, regThree, resultALu, regOneValue, regTwoValue);
+	P_C: pc PORT MAP(clk, "00000000", JumpAddress, jmp, pcOut);
+	MEM: memoria_principal PORT MAP(pcOut, memOut);
+	REG_INST: reg_instr PORT MAP(clk, memOut, opcode, regOne, regTwo, regThree, JumpAddress, jmp);
+	U_C: uc PORT MAP(clk, opcode, ALUop, jmp, regWrite);
+	U_L_A: ula PORT MAP(clk, regOneValue, regTwoValue, ALUop, resultALu);
+	Banco: banco_de_registradores PORT MAP(clk, regWrite, regOne, regTwo, regThree, resultALu, regOneValue, regTwoValue);
 	
 END cpu_arq;
 

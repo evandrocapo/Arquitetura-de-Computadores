@@ -14,9 +14,17 @@ END uc;
 
 ARCHITECTURE uc_arq OF uc IS
 
+SIGNAL jmp_realizado : BIT := '0';
+
 BEGIN
 	PROCESS (clk, opcode)
 	BEGIN
+		IF (clk='1') and opcode = "11" THEN
+			jmp_realizado <= '1';
+		ELSE
+			jmp_realizado <= '0';
+		END IF;
+	
 		CASE opcode IS
 			WHEN "00" => -- add
 				ALUop         <= "10";
@@ -32,16 +40,18 @@ BEGIN
 				regWrite      <= '0';
 			WHEN "11" => -- jmp
 				ALUop         <= "00";
-				jmp           <= '1';
+				
+				IF jmp_realizado = '1' THEN
+					jmp 			  <= '0';
+				ELSE
+					jmp           <= '1';
+				END IF;
+				
 				regWrite      <= '0';
 			WHEN OTHERS => NULL;
 				ALUop         <= "00";
 				jmp           <= '0';
 				regWrite      <= '0';
 		END CASE;
-		
-		IF (clk'EVENT and clk='0') THEN
-			jmp <= '0';
-		END IF;
 	END PROCESS;
 END uc_arq;
