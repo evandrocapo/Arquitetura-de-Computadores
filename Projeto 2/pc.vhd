@@ -8,6 +8,9 @@ ENTITY pc IS
 		pcIn   : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		pcJmp  : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
 		jmp	 : IN STD_LOGIC;
+		branch : IN STD_LOGIC;
+		pcBranch : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		branchValido: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		pcOut  : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END pc;
@@ -15,14 +18,16 @@ END pc;
 ARCHITECTURE pc_arq OF pc IS
 	SIGNAL pcAtual : STD_LOGIC_VECTOR(7 DOWNTO 0) := "00000000";
 BEGIN
-	PROCESS (clk, jmp, pcIn, pcAtual)
+	PROCESS (clk, jmp, pcIn, pcBranch, branch, branchValido, pcAtual)
 	BEGIN
 		pcOut <= pcAtual;
 	
 		IF (clk'EVENT and clk='0') THEN
-			IF jmp = '0' THEN
+			IF branch = '1' AND branchValido = "00000000" THEN
+				pcAtual <= pcBranch;
+			ELSIF jmp = '0' THEN
 				pcAtual <= pcAtual + "00000001";
-				pcOut <= pcAtual;
+				pcOut <= pcAtual;				
 			ELSE
 				pcAtual <= pcAtual(7 DOWNTO 6) & pcJmp(5 DOWNTO 0);
 			END IF;

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for cpu
-Mon Nov 15 19:32:07 2021
+Wed Nov 17 00:25:55 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Nov 15 19:32:07 2021       ;
+; Analysis & Elaboration Status      ; Successful - Wed Nov 17 00:25:55 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; cpu                                         ;
 ; Top-level Entity Name              ; cpu                                         ;
@@ -172,7 +172,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 15 19:31:59 2021
+    Info: Processing started: Wed Nov 17 00:25:47 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu -c cpu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -189,10 +189,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file banco_d
     Info (12022): Found design unit 1: banco_de_registradores-banco_de_registradores_arq File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd Line: 19
     Info (12023): Found entity 1: banco_de_registradores File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
-    Info (12022): Found design unit 1: pc-pc_arq File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/pc.vhd Line: 15
+    Info (12022): Found design unit 1: pc-pc_arq File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/pc.vhd Line: 18
     Info (12023): Found entity 1: pc File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/pc.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
-    Info (12022): Found design unit 1: uc-uc_arq File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd Line: 15
+    Info (12022): Found design unit 1: uc-uc_arq File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd Line: 16
     Info (12023): Found entity 1: uc File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_principal.vhd
     Info (12022): Found design unit 1: memoria_principal-memoria_principal_arq File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd Line: 14
@@ -201,15 +201,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file cpu_tb.
     Info (12022): Found design unit 1: cpu_tb-cpu_arq_tb File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu_tb.vhd Line: 9
     Info (12023): Found entity 1: cpu_tb File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu_tb.vhd Line: 6
 Info (12127): Elaborating entity "cpu" for the top level hierarchy
-Info (12128): Elaborating entity "pc" for hierarchy "pc:P_C" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 106
-Info (12128): Elaborating entity "memoria_principal" for hierarchy "memoria_principal:MEM" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 107
-Info (12128): Elaborating entity "reg_instr" for hierarchy "reg_instr:REG_INST" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 108
+Info (12128): Elaborating entity "pc" for hierarchy "pc:P_C" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 112
+Info (12128): Elaborating entity "memoria_principal" for hierarchy "memoria_principal:MEM" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 113
+Info (12128): Elaborating entity "reg_instr" for hierarchy "reg_instr:REG_INST" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 114
 Warning (10492): VHDL Process Statement warning at reg_instr.vhd(23): signal "jmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd Line: 23
-Info (12128): Elaborating entity "uc" for hierarchy "uc:U_C" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at uc.vhd(44): signal "jmp_realizado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd Line: 44
-Info (12128): Elaborating entity "ula" for hierarchy "ula:U_L_A" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 110
+Info (12128): Elaborating entity "uc" for hierarchy "uc:U_C" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at uc.vhd(48): signal "branch_realizado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at uc.vhd(58): signal "jmp_realizado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd Line: 58
+Info (12128): Elaborating entity "ula" for hierarchy "ula:U_L_A" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 116
 Warning (10631): VHDL Process Statement warning at ula.vhd(20): inferring latch(es) for signal or variable "E", which holds its previous value in one or more paths through the process File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Warning (10631): VHDL Process Statement warning at ula.vhd(20): inferring latch(es) for signal or variable "Ou", which holds its previous value in one or more paths through the process File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
+Warning (10631): VHDL Process Statement warning at ula.vhd(20): inferring latch(es) for signal or variable "calculoBranch", which holds its previous value in one or more paths through the process File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Warning (10631): VHDL Process Statement warning at ula.vhd(20): inferring latch(es) for signal or variable "Sum", which holds its previous value in one or more paths through the process File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Warning (10631): VHDL Process Statement warning at ula.vhd(20): inferring latch(es) for signal or variable "Sub", which holds its previous value in one or more paths through the process File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Warning (10631): VHDL Process Statement warning at ula.vhd(20): inferring latch(es) for signal or variable "R", which holds its previous value in one or more paths through the process File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
@@ -237,14 +238,14 @@ Info (10041): Inferred latch for "Sum[4]" at ula.vhd(20) File: C:/Users/Evandro/
 Info (10041): Inferred latch for "Sum[5]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Info (10041): Inferred latch for "Sum[6]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Info (10041): Inferred latch for "Sum[7]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Info (10041): Inferred latch for "Ou[0]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Info (10041): Inferred latch for "Ou[1]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Info (10041): Inferred latch for "Ou[2]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Info (10041): Inferred latch for "Ou[3]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Info (10041): Inferred latch for "Ou[4]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Info (10041): Inferred latch for "Ou[5]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Info (10041): Inferred latch for "Ou[6]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Info (10041): Inferred latch for "Ou[7]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
+Info (10041): Inferred latch for "calculoBranch[0]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
+Info (10041): Inferred latch for "calculoBranch[1]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
+Info (10041): Inferred latch for "calculoBranch[2]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
+Info (10041): Inferred latch for "calculoBranch[3]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
+Info (10041): Inferred latch for "calculoBranch[4]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
+Info (10041): Inferred latch for "calculoBranch[5]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
+Info (10041): Inferred latch for "calculoBranch[6]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
+Info (10041): Inferred latch for "calculoBranch[7]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Info (10041): Inferred latch for "E[0]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Info (10041): Inferred latch for "E[1]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Info (10041): Inferred latch for "E[2]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
@@ -253,11 +254,11 @@ Info (10041): Inferred latch for "E[4]" at ula.vhd(20) File: C:/Users/Evandro/De
 Info (10041): Inferred latch for "E[5]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Info (10041): Inferred latch for "E[6]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Info (10041): Inferred latch for "E[7]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
-Info (12128): Elaborating entity "banco_de_registradores" for hierarchy "banco_de_registradores:Banco" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 111
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Mon Nov 15 19:32:07 2021
+Info (12128): Elaborating entity "banco_de_registradores" for hierarchy "banco_de_registradores:Banco" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 117
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4769 megabytes
+    Info: Processing ended: Wed Nov 17 00:25:55 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:19
 
 

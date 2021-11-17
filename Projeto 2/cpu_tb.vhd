@@ -12,8 +12,8 @@ ARCHITECTURE cpu_arq_tb OF cpu_tb IS
 COMPONENT memoria_principal IS PORT
 	(
 		ReadAddress : IN STD_LOGIC_VECTOR (7 downto 0);
-		Instruction : OUT STD_LOGIC_VECTOR (7 downto 0)
-		
+		Instruction : OUT STD_LOGIC_VECTOR (7 downto 0);
+		AddressBranch : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
 END COMPONENT memoria_principal;
 
@@ -38,7 +38,8 @@ COMPONENT uc IS
 		opcode        : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		ALUop         : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 		jmp      : OUT STD_LOGIC;
-		regWrite      : OUT STD_LOGIC
+		regWrite      : OUT STD_LOGIC;
+		branch		  : OUT STD_LOGIC
 	);
 END COMPONENT uc;
 
@@ -74,6 +75,9 @@ COMPONENT pc IS
 		pcIn   : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		pcJmp  : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
 		jmp	 : IN STD_LOGIC;
+		branch : IN STD_LOGIC;
+		pcBranch : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		branchValido: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		pcOut  : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT pc;
@@ -91,6 +95,7 @@ SIGNAL JumpAddress: STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL ALUop: STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL jmp: STD_LOGIC;
 SIGNAL regWrite: STD_LOGIC;
+SIGNAL branch: STD_LOGIC;
 
 SIGNAL regOneValue: STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL regTwoValue: STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -98,21 +103,27 @@ SIGNAL regTwoValue: STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL resultALu : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 SIGNAL pcOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL pcBranch : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 SIGNAL clk :  BIT;
 
 SIGNAL jmp_realizado : BIT;
 
 BEGIN
-	P_C: pc PORT MAP(clk, "00000000", JumpAddress, jmp, pcOut);
-	MEM: memoria_principal PORT MAP(pcOut, memOut);
+	P_C: pc PORT MAP(clk, "00000000", JumpAddress, jmp, branch, pcBranch, resultALu, pcOut);
+	MEM: memoria_principal PORT MAP(pcOut, memOut, pcBranch);
 	REG_INST: reg_instr PORT MAP(clk, memOut, opcode, regOne, regTwo, regThree, JumpAddress, jmp);
-	U_C: uc PORT MAP(clk, opcode, ALUop, jmp, regWrite);
+	U_C: uc PORT MAP(clk, opcode, ALUop, jmp, regWrite, branch);
 	U_L_A: ula PORT MAP(clk, regOneValue, regTwoValue, ALUop, resultALu);
 	Banco: banco_de_registradores PORT MAP(clk, regWrite, regOne, regTwo, regThree, resultALu, regOneValue, regTwoValue);
 	
 	PROCESS BEGIN
         clk <= '0';
+        WAIT FOR 10 ns;
+        clk <= '1';
+        WAIT FOR 10 ns;
+		  
+		  clk <= '0';
         WAIT FOR 10 ns;
         clk <= '1';
         WAIT FOR 10 ns;
