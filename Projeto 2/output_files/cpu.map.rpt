@@ -1,5 +1,5 @@
 Analysis & Elaboration report for cpu
-Wed Nov 17 00:25:55 2021
+Wed Nov 17 01:38:22 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Nov 17 00:25:55 2021       ;
+; Analysis & Elaboration Status      ; Successful - Wed Nov 17 01:38:22 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; cpu                                         ;
 ; Top-level Entity Name              ; cpu                                         ;
@@ -172,7 +172,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 17 00:25:47 2021
+    Info: Processing started: Wed Nov 17 01:38:14 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu -c cpu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -256,9 +256,9 @@ Info (10041): Inferred latch for "E[6]" at ula.vhd(20) File: C:/Users/Evandro/De
 Info (10041): Inferred latch for "E[7]" at ula.vhd(20) File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd Line: 20
 Info (12128): Elaborating entity "banco_de_registradores" for hierarchy "banco_de_registradores:Banco" File: C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd Line: 117
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4769 megabytes
-    Info: Processing ended: Wed Nov 17 00:25:55 2021
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Wed Nov 17 01:38:22 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:20
 
 

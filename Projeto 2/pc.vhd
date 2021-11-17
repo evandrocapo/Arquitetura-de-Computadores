@@ -25,6 +25,9 @@ BEGIN
 		IF (clk'EVENT and clk='0') THEN
 			IF branch = '1' AND branchValido = "00000000" THEN
 				pcAtual <= pcBranch;
+			ELSIF branch = '1' THEN
+				pcAtual <= pcAtual + "00000010";
+				pcOut <= pcAtual;
 			ELSIF jmp = '0' THEN
 				pcAtual <= pcAtual + "00000001";
 				pcOut <= pcAtual;				

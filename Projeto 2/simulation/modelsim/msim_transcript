@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:26:02 on Nov 17,2021
+# Start time: 01:38:29 on Nov 17,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/reg_instr.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -21,11 +21,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity reg_instr
 # -- Compiling architecture reg_instr_arq of reg_instr
-# End time: 00:26:02 on Nov 17,2021, Elapsed time: 0:00:00
+# End time: 01:38:29 on Nov 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:26:02 on Nov 17,2021
+# Start time: 01:38:29 on Nov 17,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/ula.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -34,11 +34,11 @@
 # -- Loading package STD_LOGIC_SIGNED
 # -- Compiling entity ula
 # -- Compiling architecture ula_arq of ula
-# End time: 00:26:02 on Nov 17,2021, Elapsed time: 0:00:00
+# End time: 01:38:29 on Nov 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:26:02 on Nov 17,2021
+# Start time: 01:38:29 on Nov 17,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/banco_de_registradores.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -48,11 +48,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity banco_de_registradores
 # -- Compiling architecture banco_de_registradores_arq of banco_de_registradores
-# End time: 00:26:02 on Nov 17,2021, Elapsed time: 0:00:00
+# End time: 01:38:30 on Nov 17,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/pc.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:26:02 on Nov 17,2021
+# Start time: 01:38:30 on Nov 17,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/pc.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -61,11 +61,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity pc
 # -- Compiling architecture pc_arq of pc
-# End time: 00:26:02 on Nov 17,2021, Elapsed time: 0:00:00
+# End time: 01:38:30 on Nov 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:26:02 on Nov 17,2021
+# Start time: 01:38:30 on Nov 17,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/uc.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -73,11 +73,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity uc
 # -- Compiling architecture uc_arq of uc
-# End time: 00:26:02 on Nov 17,2021, Elapsed time: 0:00:00
+# End time: 01:38:30 on Nov 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:26:02 on Nov 17,2021
+# Start time: 01:38:30 on Nov 17,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/memoria_principal.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -87,11 +87,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity memoria_principal
 # -- Compiling architecture memoria_principal_arq of memoria_principal
-# End time: 00:26:03 on Nov 17,2021, Elapsed time: 0:00:01
+# End time: 01:38:30 on Nov 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:26:03 on Nov 17,2021
+# Start time: 01:38:30 on Nov 17,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -100,11 +100,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity cpu
 # -- Compiling architecture cpu_arq of cpu
-# End time: 00:26:03 on Nov 17,2021, Elapsed time: 0:00:00
+# End time: 01:38:30 on Nov 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:26:03 on Nov 17,2021
+# Start time: 01:38:30 on Nov 17,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -114,12 +114,12 @@
 # -- Loading entity cpu
 # -- Compiling entity cpu_tb
 # -- Compiling architecture cpu_arq_tb of cpu_tb
-# End time: 00:26:03 on Nov 17,2021, Elapsed time: 0:00:00
+# End time: 01:38:30 on Nov 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:26:03 on Nov 17,2021
+# Start time: 01:38:30 on Nov 17,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Evandro/Desktop/Arquitetura-de-Computadores/Projeto 2/cpu_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -129,12 +129,12 @@
 # -- Loading entity cpu
 # -- Compiling entity cpu_tb
 # -- Compiling architecture cpu_arq_tb of cpu_tb
-# End time: 00:26:03 on Nov 17,2021, Elapsed time: 0:00:00
+# End time: 01:38:30 on Nov 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  cpu_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" cpu_tb 
-# Start time: 00:26:03 on Nov 17,2021
+# Start time: 01:38:30 on Nov 17,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -153,9 +153,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Evandro  Hostname: DESKTOP-PU8L0FA  ProcessID: 10312
-#           Attempting to use alternate WLF file "./wlfta88z7t".
+#           Attempting to use alternate WLF file "./wlftrxcznj".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfta88z7t
+#           Using alternate file: ./wlftrxcznj
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -169,5 +169,5 @@
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/MEM
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/MEM
-# End time: 00:28:29 on Nov 17,2021, Elapsed time: 0:02:26
+# End time: 01:38:43 on Nov 17,2021, Elapsed time: 0:00:13
 # Errors: 0, Warnings: 6

@@ -107,8 +107,6 @@ SIGNAL pcBranch : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 SIGNAL clk :  BIT;
 
-SIGNAL jmp_realizado : BIT;
-
 BEGIN
 	P_C: pc PORT MAP(clk, "00000000", JumpAddress, jmp, branch, pcBranch, resultALu, pcOut);
 	MEM: memoria_principal PORT MAP(pcOut, memOut, pcBranch);
@@ -157,6 +155,21 @@ BEGIN
         WAIT FOR 10 ns;
         clk <= '1';
         WAIT FOR 10 ns;
+		  
+--		  clk <= '0';
+--        WAIT FOR 10 ns;
+--        clk <= '1';
+--        WAIT FOR 10 ns;
+--		  
+--		  clk <= '0';
+--        WAIT FOR 10 ns;
+--        clk <= '1';
+--        WAIT FOR 10 ns;
+--		  
+--		  clk <= '0';
+--        WAIT FOR 10 ns;
+--        clk <= '1';
+--        WAIT FOR 10 ns;
 		  
 		  clk <= '0';
         WAIT;
